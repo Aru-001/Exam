@@ -51,17 +51,16 @@ print("Sorted array : ",result)
 def binary_search(arr : list[int], low : int, high : int, target : int) -> int:
     if low > high:
         return -1
-    # if len(arr) > 1:
+    
     mid = (low + high) // 2
-    # else:
-    #     mid = 0
+    
     if arr[mid] == target: return mid
     elif arr[mid] > target : return binary_search(arr,low, mid - 1, target)
     else : return binary_search(arr,mid + 1, high, target)
 
 index : int = binary_search(result, low, high, target)
 
-if binary_search != -1:
+if index != -1:
     print(f"Element found at {index + 1} position in the sorted array")
 else:
     print("not found...index : -1")

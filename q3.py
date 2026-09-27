@@ -12,5 +12,5 @@ print("The frequency of the characters in the entered string is : ", frequency)
 
 for ch in frequency:
     if frequency[ch] == 1:
-        print(frequencych)
+        print(frequency[ch])
         break
